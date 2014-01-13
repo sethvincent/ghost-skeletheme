@@ -1,0 +1,25 @@
+{
+  "name": "ghost-skeletheme",
+  "description": "A starter theme for the Ghost blogging platform.",
+  "version": "0.0.0",
+  "repository": {
+    "url": "git://github.com/sethvincent/ghost-starter-theme.git"
+  },
+  "main": "src/index.js",
+  "scripts": {
+    "build-css": "npm-css src/style.css | myth | cleancss -o assets/css/bundle.css",
+    "build-js": "browserify src/index.js | uglifyjs -c > assets/js/bundle.js",
+    "build": "npm run build-css & npm run build-js"
+  },
+  "dependencies": {
+    "normalize-css": "https://github.com/sethvincent/normalize-css/tarball/master",
+    "clean-css": "~2.0.6",
+    "topcoat-button": "~0.6.2"
+  },
+  "devDependencies": {
+    "myth": "~0.3.0",
+    "browserify": "~3.19.1",
+    "uglify-js": "~2.4.8",
+    "npm-css": "~0.2.3"
+  }
+}

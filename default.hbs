@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>{{meta_title}}</title>
+  <meta name="description" content="{{meta_description}}" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="MobileOptimized" content="320" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="{{asset "favicon.ico"}}">
+  <link rel="stylesheet" type="text/css" href="{{asset "css/bundle.css"}}" />
+
+  {{ghost_head}}
+</head>
+<body class="{{body_class}}">
+
+  <header class="site-header" {{#if @blog.cover}}style="background-image: url({{@blog.cover}})"{{/if}}>
+    <div class="container">
+      {{#if @blog.logo}}
+        <a class="blog-logo" href="{{@blog.url}}">
+          <img src="{{@blog.logo}}" alt="Blog Logo" />
+        </a>
+      {{/if}}
+      <h1 class="blog-title">
+        <a href="{{@blog.url}}">
+          {{@blog.title}}
+        </a>
+      </h1>
+      <h2 class="blog-description">{{@blog.description}}</h2>
+    </div>
+  </header>
+
+  <main class="site-content" role="main">
+    <div class="container">
+      {{{body}}}
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <a class="subscribe" href="{{@blog.url}}/rss/"><span class="tooltip">RSS</span></a>
+      <div class="inner">
+        <section class="copyright">All content copyright <a href="{{@blog.url}}/">{{@blog.title}}</a> &copy; {{date format="YYYY"}} &bull; All rights reserved.</section>
+      </div>
+    </div>
+  </footer>
+
+  {{ghost_foot}}
+
+  <script type="text/javascript" src="{{asset "js/bundle.js"}}"></script>
+</body>
+</html>
