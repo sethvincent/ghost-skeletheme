@@ -7,9 +7,9 @@
   },
   "main": "src/index.js",
   "scripts": {
-    "build-css": "npm-css src/style.css | myth | cleancss -o assets/css/bundle.css",
-    "build-js": "browserify src/index.js | uglifyjs -c > assets/js/bundle.js",
-    "build": "npm run build-css & npm run build-js"
+    "bundle-css": "npm-css src/style.css | myth | cleancss -o assets/css/bundle.css",
+    "bundle-js": "browserify src/index.js | uglifyjs -c > assets/js/bundle.js",
+    "bundle": "npm run build-css & npm run build-js"
   },
   "dependencies": {
     "normalize-css": "https://github.com/sethvincent/normalize-css/tarball/master",
