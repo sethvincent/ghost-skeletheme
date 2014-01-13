@@ -149,6 +149,28 @@ blockquote {
   padding: 0px 15px;
 }
 
+input,
+textarea {
+  border: 1px solid color(var(gray) tint(80%));
+  padding: 5px 10px;
+  font-family: var(sans-serif);
+}
+
+button, 
+.button {
+  font-family: var(sans-serif);
+  display: inline-block;
+  padding: 5px 10px;
+  background-color: #fff;
+  border: 1px solid color(var(gray) tint(80%));
+  border-radius: 3px;
+  text-decoration: none;
+  cursor: pointer;
+  color: #666;
+  font-weight: 300;
+}
+
+
 
 /*
 * LAYOUT

@@ -34,6 +34,8 @@ Edit the style.css and index.js files in the src directory.
 
 Run `npm run bundle` to generate the css and js bundles that are then places in the assets/css and assets/js directories.
 
+You can run just the css bundler with `npm run build-css` and just the js bundler with `npm run build-js`.
+
 ## License
 
 MIT.
