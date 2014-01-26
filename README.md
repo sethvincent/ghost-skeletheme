@@ -4,9 +4,9 @@ A starter theme for the [Ghost](http://github.com/TryGhost/Ghost) blogging platf
 
 ## Why
 
-This starter theme makes use these three css modules to ease the development process:
+This starter theme makes use of these three css modules to ease the development process:
 
-- [npm-css](https://github.com/defunctzombie/npm-css), a module for `@import`ing css from the `node_modules` folder.
+- [rework-npm-cli](https://github.com/sethvincent/rework-npm-cli), a module for `@import`ing css from the `node_modules` folder using rework-npm.
 - [myth](https://github.com/segmentio/myth), a preprocessor module that generates cross-browser css based on [rework](https://github.com/reworkcss/rework).
 - [clean-css](https://github.com/GoalSmashers/clean-css), a module that minifies css files.
 
@@ -34,7 +34,9 @@ Edit the style.css and index.js files in the src directory.
 
 Run `npm run bundle` to generate the css and js bundles that are then places in the assets/css and assets/js directories.
 
-You can run just the css bundler with `npm run build-css` and just the js bundler with `npm run build-js`.
+You can run just the css bundler with `npm run bundle-css` and just the js bundler with `npm run bundle-js`.
+
+Run `npm start` to watch the css and js files in the `src` folder for changes and automatically regenerate the bundles.
 
 ## License
 

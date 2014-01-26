@@ -7,7 +7,7 @@
   },
   "scripts": {
     "bundle-css": "rework-npm src/style.css | myth | cleancss -o assets/css/bundle.css",
-    "bundle-js": "browserify src/index.js -o assets/js/bundle.js",
+    "bundle-js": "browserify src/index.js | uglifyjs -c > assets/js/bundle.js",
     "bundle": "npm run bundle-css && npm run bundle-js",
     "start": "nodemon -e js,css --ignore assets --exec 'npm run bundle'"
   },
