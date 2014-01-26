@@ -3,7 +3,7 @@
   "description": "A starter theme for the Ghost blogging platform.",
   "version": "0.1.0",
   "repository": {
-    "url": "git://github.com/sethvincent/ghost-starter-theme.git"
+    "url": "git://github.com/sethvincent/ghost-skeletheme.git"
   },
   "scripts": {
     "bundle-css": "rework-npm src/style.css | myth | cleancss -o assets/css/bundle.css",
