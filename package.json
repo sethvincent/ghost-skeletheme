@@ -1,25 +1,25 @@
 {
   "name": "ghost-skeletheme",
   "description": "A starter theme for the Ghost blogging platform.",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "repository": {
     "url": "git://github.com/sethvincent/ghost-starter-theme.git"
   },
-  "main": "src/index.js",
   "scripts": {
-    "bundle-css": "npm-css src/style.css | myth | cleancss -o assets/css/bundle.css",
-    "bundle-js": "browserify src/index.js | uglifyjs -c > assets/js/bundle.js",
-    "bundle": "npm run build-css & npm run build-js"
+    "bundle-css": "rework-npm src/style.css | myth | cleancss -o assets/css/bundle.css",
+    "bundle-js": "browserify src/index.js -o assets/js/bundle.js",
+    "bundle": "npm run bundle-css && npm run bundle-js",
+    "start": "nodemon -e js,css --ignore assets --exec 'npm run bundle'"
   },
   "dependencies": {
-    "normalize-css": "https://github.com/sethvincent/normalize-css/tarball/master",
-    "clean-css": "~2.0.6",
-    "topcoat-button": "~0.6.2"
+    "normalize-css": "sethvincent/normalize-css"
   },
   "devDependencies": {
+    "rework-npm-cli": "0.0.1",
     "myth": "~0.3.0",
     "browserify": "~3.19.1",
     "uglify-js": "~2.4.8",
-    "npm-css": "~0.2.3"
+    "clean-css": "~2.0.7",
+    "nodemon": "~1.0.13"
   }
 }

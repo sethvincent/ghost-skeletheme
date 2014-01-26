@@ -1,5 +1,4 @@
-@import 'normalize-css';
-@import 'topcoat-button';
+@import "normalize-css";
 
 :root {
 	var-gray: #323230;
